@@ -1,0 +1,1856 @@
+@font-face {
+    font-family: roboto;
+    src: url(./roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: vogue;
+    src: url(./vogue/Vogue.ttf);
+}
+
+@font-face {
+    font-family: test;
+    src: url(./elegante_classica/Elegante\ Classica.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 200ms;
+}
+
+body {
+    background-color: #e7e7e7;
+    transition: .5s;
+}
+
+/* ----------------------------header-------------------------- */
+.hamburguer-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+}
+
+#menu li a {
+    text-shadow: 0px 0px 1px #000;
+    color: #fff;
+    text-decoration: none;
+    margin-left: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+#menu li a:hover {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .hamburguer-menu {
+        display: block;
+        margin-left: 30px
+    }
+
+    #menu {
+        padding: 10px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menu li {
+        margin: 10px 0;
+    }
+
+    #menu.active {
+        display: flex;
+    }
+}
+
+header .navbar {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: #8547FE;
+    padding: 20px 40px;
+    align-items: center;
+}
+
+header .navbar .imgheader {
+    width: 8%;
+    background-color: none;
+}
+
+header .navbar ul {
+    display: flex;
+    list-style-type: none;
+    width: 60%;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    transition: color 0.3;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.btns-header {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botao {
+    background-color: rgb(247, 99, 0);
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.btns-header a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.btns-header .modos img {
+    width: 60px;
+}
+
+.modos {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.botao:hover {
+    background-color: rgb(247, 113, 17);
+    transform: scaleX(1.0);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background-color: #000000;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+/* ------Fim do header-------------- */
+
+/* ------Imagem do lado do texto----------- */
+#home {
+    background-image: url(https://ios.org.br/wp-content/uploads/2022/05/hey.png);
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1px;
+    transition: all 0.5s ease-in-out;
+    height: 60vh;
+}
+
+.imgcapa {
+    width: 500px;
+    height: 400px;
+    object-fit: contain;
+}
+
+#text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 850px;
+    text-align: center;
+}
+
+#text h1 {
+    font-size: 60px;
+    color: #fff;
+}
+
+#text h2 {
+    font-size: 30px;
+    color: #fff;
+}
+
+/* -----------Fim da imagem do lado do texto----------- */
+
+
+/* começo da segunda barra do carrocel */
+.navbarCarrocel {
+    width: 8%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.navbarImg {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.navbarImg img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ---------Fim do carrocel da segunda barra--------- */
+
+
+
+/* comeco da segunda barra de navegação */
+.navbot {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #8547FE;
+    list-style-type: none;
+    gap: 35%;
+}
+
+.navbot .logo {
+    width: 10%;
+    height: 20%;
+}
+
+.navbot p {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+}
+
+.navbot p a {
+    color: #fff;
+}
+
+.navbot p a:hover {
+    color: #000;
+    transition: 300ms;
+}
+
+.navbot a li {
+    margin-top: 10px;
+    color: aliceblue;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.navbot a {
+    text-decoration: none;
+}
+
+.carrossel2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sobreimagens2 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+}
+
+.sobreimagens2 img {
+    width: 100%;
+    height: 100%;
+}
+
+/*--- Fim da segunda barra de navegação----- */
+
+
+
+/* -----------Sobre------------------ */
+#sobre {
+    background-color: #dad7d7;
+    display: flex;
+    padding: 170px;
+    color: #000000;
+}
+
+#sobre img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#text2 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 850px;
+    text-align: center;
+}
+
+#text2 p {
+    font-family: roboto;
+    font-size: 22px;
+    line-height: 1.8rem;
+    text-decoration: none;
+    text-align: left;
+    margin-right: 20%;
+}
+
+#text2 h2 {
+    font-size: 44px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 90px;
+}
+
+/* ----carrocel de imagens do sobre ------*/
+.carrossel {
+    margin-top: 20%;
+    width: 800px;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sobreimagens {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sobreimagens img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ------Fim do carrocel do sobre----- */
+
+
+
+
+/* ------Relatos dos professores------ */
+.container3 {
+    padding-top: 80px;
+    min-height: 80vh;
+    transition: all 0.5s ease-in-out;
+}
+
+.container3 h2 {
+    color: #000000;
+    margin-bottom: 5%;
+    text-align: center;
+    color: #000000;
+    font-size: 60px;
+    font-family: apple;
+}
+
+.professores {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+
+.foto {
+    width: 160px;
+    height: 160px;
+    border-radius: 400px;
+    margin-bottom: 20px;
+}
+
+.foto1 {
+    width: 160px;
+    height: 160px;
+    border-radius: 400px;
+}
+
+.conteudo {
+    height: auto;
+    font-size: 20px;
+}
+
+/* -------Texto dos Professores----- */
+#joao,
+#gustavo,
+#clarice {
+    transition: 500ms;
+}
+
+.acordeao {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    padding-bottom: 40px;
+    gap: 1%;
+}
+
+.titulo {
+    width: 50%;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(255, 136, 0);
+    color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.titulo.focus {
+    outline: none;
+}
+
+.conteudo {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #c0c0c07e;
+    border-radius: 30px;
+    transition: max-height 0.5s ease-in;
+}
+
+.conteudo p {
+    width: 400px;
+    font-size: 17px;
+    margin: 10px 0;
+    line-height: 1.4rem;
+    padding: 10px;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 768px) {
+
+    /* ----barra de navegação---- */
+    header .navbar {
+        display: flex;
+        justify-content: left;
+        background-color: #8547FE;
+        padding: 20px 5px;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    header .navbar .imgheader {
+        width: 70px;
+        background-color: none;
+        gap: 10px;
+    }
+
+    header .navbar ul {
+        display: flex;
+        list-style-type: none;
+        margin-left: 1%;
+        justify-content: left;
+    }
+
+    nav ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 10px;
+        transition: color 0.3;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .btns-header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+        font-size: 15px;
+
+    }
+
+    .btns-header .botao {
+        font-size: 15px;
+        width: 90px;
+        justify-content: right;
+        margin-left: 5px;
+        padding: 5px 5px;
+        border-radius: 15px;
+    }
+
+    .btns-header .modos .imgmodo {
+        width: 33px;
+        margin-right: 20px;
+    }
+
+    .modos {
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 25px;
+        margin-right: 6px;
+    }
+
+    /* fim da barra de navegação---- */
+
+
+    /* ------imagem do lado do texto------ */
+    #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    #home img {
+        width: 320px;
+        height: 230px;
+    }
+
+    #text {
+        font-size: 22px;
+        height: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #text p {
+        font-size: 17px;
+    }
+
+    #text h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-right: 30%;
+        margin-left: 30%;
+    }
+
+    #text h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-right: 30%;
+        margin-left: 30%;
+    }
+
+    /* -----------fim da imagem do lado do texto----------- */
+
+
+
+    /* ----segunda barra de navegação----- */
+
+    .navbot {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        background-color: blueviolet;
+        list-style-type: none;
+        cursor: pointer;
+        gap: 20%;
+    }
+
+    .navbot a li {
+        width: 40px;
+    }
+
+    .navbot p {
+        font-size: 13px;
+    }
+
+    .carrossel2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 30%;
+        max-width: 200px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .sobreimagens2 {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .sobreimagens2 img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* -----fim da segunda barra de navegação----- */
+
+    /* ---------Sobre--------- */
+    #sobre {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    #sobre img {
+        width: 300px;
+        height: 230px;
+    }
+
+    #text2 {
+        height: auto;
+        font-size: 22px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #text2 p {
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-right: 30%;
+        margin-left: 30%;
+    }
+
+    #text2 h2 {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-right: 30%;
+        margin-left: 30%;
+        font-size: 37px;
+        margin-bottom: 20px;
+    }
+
+    /* ------Fim do sobre----- */
+
+    /* -------carrossel de imagens ----- */
+    .carrossel {
+        width: 300px;
+        max-width: 400px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px #000000;
+    }
+
+    .sobreimagens {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .sobreimagens img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* ---------fim do carrossel de imagens-------- */
+
+
+    /* ---------Relatos dos professores-----  */
+    .container3 {
+        background-color: #e7e7e7;
+        height: auto;
+        padding-top: 40%;
+        padding-bottom: 4x;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .container3 div {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .professores {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .foto1 {
+        width: 120px;
+        height: 120px;
+        border-radius: 400px;
+    }
+
+    .foto {
+        width: 120px;
+        height: 120px;
+        border-radius: 400px;
+    }
+
+    .acordeao {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        gap: 3px;
+    }
+
+    .titulo {
+        width: 160px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgb(255, 136, 0);
+        color: #ddd;
+        border: none;
+        cursor: pointer;
+    }
+
+    .titulo.focus {
+        outline: none;
+    }
+
+    .conteudo {
+        max-height: 0;
+        overflow: hidden;
+        background-color: #d0d0d0;
+        padding: 0;
+        transition: all 0.3s ease-in;
+    }
+}
+
+/* --------------------------------------------dark-theme----------------------------------------------- */
+
+.dark-theme #home {
+    background-color: #6a0dd7;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme #text h1 {
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme #text p {
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme #sobre {
+    background-color: #2e2e2e;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme #text2 h2 {
+    color: #fdfdfd;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme #text2 p {
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme .container3 {
+    background-color: #2e2e2e;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme #container3 h2 {
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark-theme .container3 h2 {
+    color: #ffffff;
+}
+
+/* ------------------------------------fim do modo escuro------------------ */
+
+/* ------------------------------------------------ex alunos------------------------------------------------- */
+.body {
+    width: 97vw;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #e7e7e7;
+}
+
+.main {
+    width: 82%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.relatosex {
+    padding: 60px;
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-family: apple;
+}
+
+.ano {
+    width: 21%;
+    height: 85%;
+    background: blue;
+    position: absolute;
+    transition: 0.5s;
+    background: #8447fe;
+    border-radius: 25px;
+}
+
+.fundo_esquerda {
+    left: -21%;
+}
+
+.lado_esquerdo {
+    left: 7%;
+}
+
+.meio img {
+    height: 45%;
+}
+
+.meio {
+    left: 38%;
+    height: 97%;
+    width: 23%;
+    margin-top: 10px;
+    background-color: #6a0dd7;
+    border-radius: 25px;
+}
+
+.lado_direito {
+    left: 72%;
+}
+
+.fundo_direito {
+    left: 100%;
+}
+
+.btn {
+    background: none;
+    border: none;
+    z-index: 11;
+}
+
+.lado_btn {
+    font-size: 40px;
+    color: #6a0dd7;
+    cursor: pointer;
+}
+
+.lado_btn:hover {
+    color: #D9531E;
+    font-size: 45px;
+}
+
+.meio .img19 {
+    margin-left: 43px;
+}
+
+.img19 {
+    width: 70%;
+    margin-left: 38px;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 40%;
+    object-fit: cover;
+    border: solid 2px #ffffff;
+}
+
+h2.anoex {
+    color: #ebf8f6;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.ano button,
+.meio button {
+    margin-left: 26%;
+    margin-top: 10%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.lado_esquerdo button {
+    margin-left: 25%;
+    margin-top: 10%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.texto_relato1 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+}
+
+.lado_direito button,
+.fundo_direito button {
+    margin-left: 25%;
+    margin-top: 10%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.meio button:hover {
+    background-color: #D9531E;
+    cursor: pointer;
+}
+
+#secao_relato,
+#secao_relato2,
+#secao_relato3,
+#secao_relato4,
+#secao_relato5 {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#secao_relato .fundo,
+#secao_relato2 .fundo2,
+#secao_relato3 .fundo3,
+#secao_relato4 .fundo4,
+#secao_relato5 .fundo5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.658);
+
+}
+
+#secao_relato .relato,
+#secao_relato2 .relato2,
+#secao_relato3 .relato3,
+#secao_relato4 .relato4,
+#secao_relato5 .relato5 {
+    width: 40%;
+    height: 80%;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 50px;
+    display: none;
+    border-radius: 15px;
+    border: solid 5px #000000;
+}
+
+
+#secao_relato.ativo,
+#secao_relato2.lead,
+#secao_relato3.lead3,
+#secao_relato4.lead4,
+#secao_relato5.lead5 {
+    display: flex;
+}
+
+
+#secao_relato.caixaex .manha,
+#secao_relato2.vinte_vinte .manha2,
+#secao_relato3.dezenove_dezenove .manha3,
+#secao_relato4.vinte_dois .manha4,
+#secao_relato5.vinte_tres .manha5 {
+    display: flex;
+}
+
+
+.btn_fechar {
+    background: none;
+    border: none;
+
+}
+
+.lado_direito button:not(.btn22) {
+    pointer-events: none;
+}
+
+.lado_direito button:not(.btn19) {
+    pointer-events: none;
+}
+
+.lado_direito button:not(.btn23) {
+    pointer-events: none;
+}
+
+
+.lado_direito button:not(.btn20) {
+    pointer-events: none;
+}
+
+.lado_esquerdo button:not(.btn22) {
+    pointer-events: none;
+}
+
+.lado_esquero button:not(.btn19) {
+    pointer-events: none;
+}
+
+.lado_esquerdo button:not(.btn23) {
+    pointer-events: none;
+}
+
+.lado_esquerdo button:not(.btn20) {
+    pointer-events: none;
+}
+
+.ano_caixa {
+    text-align: center;
+    font-family: roboto;
+    font-size: 55px;
+}
+
+.texto_relato {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: roboto;
+}
+
+.texto_relato1 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: roboto;
+}
+
+.btn_fechar {
+    margin-top: 30px;
+    margin-left: 25%;
+}
+
+.fechar {
+    font-size: 50px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.fechar:hover {
+    transform: scale(1.3);
+}
+
+/* -------fim do CSS do relatos dos ex alunos------- */
+
+/* ------inicio da responsividade dos relatos de ex alunos ------- */
+@media (max-width: 428px) {
+    .texto_relato {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .relatosex {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    #secao_relato4 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .texto_relato1 {
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: -30px;
+    }
+
+    .ano {
+        width: 21%;
+        height: 85%;
+        background: blue;
+        position: absolute;
+        transition: 0.5s;
+        background: #8447fe;
+        border-radius: 25px;
+    }
+
+    .fundo_esquerda {
+        overflow: hidden;
+    }
+
+    .fundo_esquerda img {
+        width: 0%;
+    }
+
+    .fundo_esquerda h2 {
+        color: #8447fe;
+    }
+
+    .lado_esquerdo {
+        overflow: hidden;
+
+    }
+
+    .lado_esquerdo img {
+        width: 0%;
+    }
+
+    .lado_esquerdo h2 {
+        color: #8447fe;
+    }
+
+    .lado_direito h2 {
+        font-size: 2px;
+    }
+
+    .lado_esquerdo h2 {
+        font-size: 2px;
+
+    }
+
+    .lado_direito button {
+        margin-left: 100%;
+    }
+
+    .lado_esquerdo button {
+        margin-left: 100%;
+    }
+
+    .fundo_direito button {
+        margin-left: 100%;
+    }
+
+    .fundo_esquerda button {
+        margin-left: 100%;
+    }
+
+    .img19 {
+        width: 70%;
+        margin-left: 25px;
+        margin-top: 30px;
+        border-radius: 10px;
+        height: 40%;
+        object-fit: cover;
+        border: solid 2px #ffffff;
+
+    }
+
+
+    .meio {
+        left: 15%;
+        height: 97%;
+        width: 70%;
+        margin-top: 10px;
+        background-color: #6a0dd7;
+        border-radius: 25px;
+        z-index: 11;
+    }
+
+    .meio button {
+        margin-left: 20%;
+    }
+
+    .meio .img19 {
+        margin-left: 33px;
+    }
+
+
+
+    .lado_direito {
+        overflow: hidden;
+
+    }
+
+    .lado_direito h2 {
+        color: #8447fe;
+    }
+
+
+
+    .lado_direito img {
+
+        width: 0%;
+    }
+
+
+    .fundo_direito {
+        overflow: hidden;
+
+    }
+
+    .fundo_direito img {
+        width: 0%;
+    }
+
+    .fundo_direito h2 {
+        color: #8447fe;
+    }
+
+    .btn_fechar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+
+
+
+    #secao_relato,
+    #secao_relato2,
+    #secao_relato3,
+    #secao_relato4,
+    #secao_relato5 {
+        justify-content: left;
+    }
+
+
+    #secao_relato.ativo,
+    #secao_relato2.lead,
+    #secao_relato3.lead3,
+    #secao_relato4.lead4,
+    #secao_relato5.lead5 {
+        display: flex;
+        z-index: 103;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+    }
+
+    #secao_relato .relato {
+        width: 100%;
+    }
+
+
+    #secao_relato2 .relato2,
+    #secao_relato3 .relato3,
+    #secao_relato4 .relato4,
+    #secao_relato5 .relato5 {
+        width: 100%;
+        z-index: 105;
+    }
+
+    #secao_relato.caixaex .manha,
+    #secao_relato2.vinte_vinte .manha2,
+    #secao_relato3.dezenove_dezenove .manha3,
+    #secao_relato4.vinte_dois .manha4,
+    #secao_relato5.vinte_tres .manha5 {
+        display: flex;
+        z-index: 104;
+    }
+
+    .texto_relato {
+        text-align: center;
+        font-size: 20px;
+        /* margin-top: 20px ;
+        margin-left: 25px;
+        margin-right: 25px; */
+        /* position: absolute; */
+    }
+
+    .ano_caixa {
+
+        text-align: center;
+        font-family: roboto;
+        font-size: 40px;
+        margin-top: -20px;
+        /* position: absolute; */
+
+    }
+
+    .fechar:hover {
+        transform: scale(1.2);
+    }
+
+    .fechar {
+        font-size: 40px;
+        color: #000000;
+        cursor: pointer;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+
+
+
+}
+
+/* -------- fim da responsividade dos relatos de ex alunos ------- */
+
+
+/* ----------- Modo escuro  exalunos----------- */
+
+.dark-theme {
+    background-color: #2e2e2e;
+    color: #f5f5f5;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-theme .body {
+    background-color: #2e2e2e;
+    color: #000;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-theme .relatosex {
+    color: #ffffff;
+}
+
+.dark-theme .container {
+    background-color: #2e2e2e;
+    color: #f5f5f5;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-theme #emcima {
+    background-color: #2e2e2e;
+    color: #f5f5f5;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dark-theme i {
+    color: #0194D3;
+}
+
+.dark-theme i:hover {
+    color: #D9531E;
+}
+
+.dark-theme .dark-button {
+    background-color: #6a0dd7;
+    color: white;
+}
+
+.dark-theme .meio .dark-button {
+    background-color: #8447fe;
+}
+
+
+.dark-theme .meio #btnex:hover {
+    background-color: #b32501;
+}
+
+/* -------fim do modo escuro ex alunos --------- */
+
+
+
+
+
+/* --------------------------------------linha tempo------------------------- */
+
+/* -------------------------computador-------------------------- */
+.timeline {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 8%;
+    padding-bottom: 5%;
+}
+
+.timeline h2 {
+    text-align: center;
+    font-family: butler;
+    font-size: 4em;
+    margin-bottom: 10%;
+    padding-top: 10%;
+}
+
+.linha-cl {
+    background-color: #6a0dd7;
+    display: none;
+}
+
+.timeline hr {
+    rotate: 90deg;
+    background-color: #6a0dd7;
+    height: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.linha1 {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.linha2 {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.content-left {
+    margin-left: 60%;
+    border-radius: 25px;
+    border: 5px solid #6a0dd7;
+    padding: 20px;
+    font-family: roboto;
+}
+
+.timelineL-text {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+.content-left h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: vogue;
+}
+
+.content-rigth {
+    border: 5px solid #6a0dd7;
+    margin-right: 60%;
+    border-radius: 25px;
+    padding: 20px;
+    font-family: roboto;
+}
+
+.content-rigth h2 {
+    font-size: 2em;
+    margin-left: 1%;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: vogue;
+}
+
+.timelineR-text {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 1%;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+/*---------------------computador-------------------------- */
+
+/*-------------------------------celular-------------------------- */
+@media (max-width:768px) {
+    .content-left {
+        margin-left: 4%;
+        margin-right: 4%;
+        padding: 16px;
+        text-align: left;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .content-rigth {
+        margin-left: 4%;
+        margin-right: 4%;
+        text-align: left;
+        padding: 5%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .linha1,
+    .linha2 {
+        display: none;
+    }
+
+    .timeline h2 {
+        font-size: 2em;
+    }
+}
+
+/* --------------------------------------celular-------------------------- */
+
+/* --------------------modo-escuro-------------------- */
+.dark-theme {
+    background-color: #3e3e3e;
+    color: #fff;
+    transition: 400ms ease-out;
+}
+
+.dark-theme .timeline {
+    background-color: #3e3e3e;
+    color: #fff;
+    transition: 400ms ease-out;
+}
+
+.dark-theme hr {
+    background-color: #D9531E;
+}
+
+.dark-theme .content-left {
+    border: 5px solid #D9531E;
+}
+
+.dark-theme .content-rigth {
+    border: 5px solid #D9531E;
+}
+
+/* --------------------modo-escuro-------------------- */
+/* -----------------------------linha do tempo------------------------ */
+
+/* ---------------------foooter--------------- */
+footer {
+    background-color: #6a0dd7;
+    height: 80vh;
+    padding: 20px;
+    font-family: roboto;
+}
+
+footer h2 {
+    font-family: sarcolenta;
+}
+
+.casa {
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+.casa a {
+    color: #fff;
+}
+
+.footer {
+    background-color: #8547FE;
+    border-radius: 20px;
+    margin: 20px;
+    display: flex;
+    height: 85%;
+}
+
+.footer img {
+    height: 100px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.lista-maps {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 6%;
+    color: #fff;
+}
+
+.lista-maps h2 {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.lista-maps ul li {
+    list-style-type: none;
+    margin-bottom: 25px;
+    font-family: roboto;
+}
+
+.lista-maps ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.lista-maps li :hover {
+    text-decoration: none;
+    color: #1e1e1e;
+    transition: 300ms;
+}
+
+.icons {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 6%;
+    color: #fff;
+}
+
+.icons h2 {
+    margin-bottom: 80px;
+    color: #fff;
+    text-align: center;
+}
+
+.icons ul li {
+    list-style-type: none;
+    margin-bottom: 25px;
+    font-family: roboto;
+}
+
+.icons ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.9rem;
+}
+
+.icons li :hover {
+    text-decoration: none;
+    color: #1e1e1e;
+    transition: 300ms;
+}
+
+.icons ul li a span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.conversa {
+    margin-top: 40px;
+    margin-left: 6%;
+    color: #fff;
+}
+
+.conversa p {
+    text-align: center;
+}
+
+.conversa h2 {
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.conversa ul li {
+    list-style-type: none;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: roboto;
+}
+
+.conversa ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.9rem;
+}
+
+.endereco {
+    margin-left: 6%;
+    margin-top: 40px;
+    color: #fff;
+}
+
+.endereco h2 {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+/* --------------------celular----------------------------- */
+
+@media (max-width: 768px) {
+    footer {
+        height: auto;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: auto;
+    }
+
+    .footer img {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .lista-maps {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .icons {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .conversa {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .endereco {
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* ------------------------dark-mode------------------------ */
+
+.dark-theme footer {
+    background-color: #4b0998;
+    color: #fff;
+    transition: 400ms ease-out;
+}
+
+.dark-theme .footer {
+    background-color: #6a0dd7;
+    color: #fff;
+    transition: 400ms ease-out;
+}
+
+.dark-theme .icons i {
+    color: #fff;
+    transition: 400ms ease-out;
+}
+
+.dark-theme .casa i {
+    color: #fff;
+    transition: 400ms ease-out;
+}
+
+/* -----------------------dark-mode------------------------ */
+
+
+
+
+/* ------parallax----- */
+
+.parallax1 {
+    background-image: url(./08-11-2023-\ Aplicação\ Questionário\ Psicossocial\ \(2\).jpeg);
+    height: 90vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax1 p {
+    font-family: roboto;
+    color: #ffffff;
+    font-size: 3rem;
+    padding: 15%;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parallax2 {
+    background-image: url(./12-23\ _lanche\ coletivo\ \(22\).jpeg);
+    height: 80vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax2 p {
+    font-family: roboto;
+    color: #ffffff;
+    font-size: 3rem;
+    padding: 15%;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+@media (max-width: 768px) {
+    .parallax1 p {
+        font-size: 2rem;
+    }
+
+    .parallax2 p {
+        font-size: 2rem;
+    }
+}
+
+
+a {
+    transition: 5s;
+}
